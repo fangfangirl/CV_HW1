@@ -27,10 +27,9 @@ CV_HW1/
 ├─ cvhw1-teacher-training-process.ipynb
 ├─ cvhw1-student-training-process.ipynb
 └─ cvhw1-inference-process.ipynb
-
+```
 > Note: When using Colab, upload the dataset and model files to your environment, and update the paths in the notebooks accordingly.
 
-```
 ## Environment Setup
 
 - Python 3.10+
@@ -74,13 +73,16 @@ pip install -r requirements.txt
 ## Usage
 
 ### Training
-The training process is divided into two stages via Jupyter Notebooks:
+
 1. Teacher Model Training: Open and run `cvhw1-teacher-training-process.ipynb` to train the teacher model and save the weights (e.g., teacher_model.pth).
-2. Student Model Training (Distillation): Open and run `cvhw1-student-training-process.ipynb`. This notebook loads the teacher's weights and trains the student model using the distillation loss (combination of CrossEntropy and KL Divergence).
-這個裡面就已經包含 validation 資料集的評估，所以請根據只是一步一步地做就好
+2. Student Model Training (Knowledge Distillation): Open and run `cvhw1-student-training-process.ipynb`. This notebook loads the teacher's weights and trains the student model using a distillation loss (a combination of CrossEntropy and KL Divergence).
+The notebook also evaluates the student model on the validation dataset after each epoch and after the final epoch.
 
 ### Inference
 * The inference logic is included at the end of the student training notebooks.
 * Alternatively, you can run cvhw1-inference-process.ipynb to generate predictions on the test dataset using pretrained student weights.
 * Ensure the model weights are placed in the directory specified in the notebook.
 > Note: Only the student model is required for inference.
+
+## Performance Snapshot
+<img width="1766" height="320" alt="image" src="https://github.com/user-attachments/assets/42818b0a-400b-4e87-bfc8-6c466e353931" />
