@@ -30,7 +30,7 @@ CV_HW1/
 ```
 > **Note:** The dataset and model files are not included in the repository.  
 > Please download or prepare the dataset yourself following the structure above (i.e., extract the provided assignment package).  
-> When using **Colab**, upload the dataset and model files to your environment and update the paths in the notebooks accordingly.  
+> When using **Colab** or **Kaggle**, upload the dataset and model files to your environment and update the paths in the notebooks accordingly.  
 > When using a **local machine**, place the dataset in the same structure and update the notebook file paths to match your local directories.
 ## Environment Setup
 
