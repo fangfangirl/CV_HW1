@@ -97,4 +97,5 @@ The table below summarizes the performance of the Teacher and Student models on 
 
 ### Leaderboard / Final Results
 The screenshot below shows the final test leaderboard for the project:  
+
 ![Result](leaderboard.png)
