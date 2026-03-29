@@ -95,3 +95,4 @@ The notebook also evaluates the student model on the validation dataset after ea
 | Student     | Test        | 98.00%  | 
 
 下面是leaderboard 截圖
+![Result](leaderboard.png)
