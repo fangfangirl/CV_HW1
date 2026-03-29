@@ -4,21 +4,32 @@
 * **Name:** 張周芳
 
 ## Introduction
-This project implements image classification for HW1. It implements a student-teacher knowledge distillation approach for image classification. 
-The student model learns from both hard labels and soft predictions of the teacher model to improve performance. 
-The project includes training notebooks for both the teacher and student models, and an evaluation abd inference notebooks to predict on test data.
+This project implements an image classification pipeline for HW1 using a student–teacher knowledge distillation framework.  
+The student model is trained using both hard labels and soft predictions from the teacher model to improve generalization performance.
+
+The project includes:
+- A notebook for training the teacher model
+- A notebook for training the student model with knowledge distillation
+- Evaluation on the validation dataset 
+- A notebook for inference to generate predictions on the test dataset
 
 ## Dataset
-Place the dataset folder under `HW1/dataset/` with the following structure:
+Place the dataset folder under the following structure:
 ```
-CV_HW1/dataset/
-├─ teacher_model.pth # The teacher to train the student
-├─ student_model.pth # The final model weight (result)
-├─ requirements.txt # 這個是如果是在自己的環境中執行需要的
-└─ data/ # 訓練資料
-    ├─ train/
-    ├─ val/
-    └─ test/
+CV_HW1/
+├─ data/
+│    ├─ train/
+│    ├─ val/
+│    └─ test/
+├─ teacher_model.pth # Pretrained teacher model (optional)
+├─ student_model.pth # Final trained model (output)
+├─ requirements.txt
+├─ cvhw1-teacher-training-process.ipynb
+├─ cvhw1-student-training-process.ipynb
+└─ cvhw1-inference-process.ipynb
+
+> Note: When using Colab, upload the dataset and model files to your environment, and update the paths in the notebooks accordingly.
+
 ```
 ## Environment Setup
 
@@ -26,8 +37,14 @@ CV_HW1/dataset/
 - GPU recommended (CUDA supported)
 
 This project was developed and tested on Google Colab and Kaggle, where most required packages are pre-installed.  
-If you are running this project on your local machine, please follow the steps below.
+For running this project on your local machine, follow the steps below.
 
+### Step 0: Clone the Repository
+
+```bash
+git clone https://github.com/fangfangirl/CV_HW1.git
+cd CV_HW1
+```
 ### Step1: Using Conda (Recommended do)
 
 ```bash
@@ -53,3 +70,17 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu12
 ```bash
 pip install -r requirements.txt
 ```
+
+## Usage
+
+### Training
+The training process is divided into two stages via Jupyter Notebooks:
+1. Teacher Model Training: Open and run `cvhw1-teacher-training-process.ipynb` to train the teacher model and save the weights (e.g., teacher_model.pth).
+2. Student Model Training (Distillation): Open and run `cvhw1-student-training-process.ipynb`. This notebook loads the teacher's weights and trains the student model using the distillation loss (combination of CrossEntropy and KL Divergence).
+這個裡面就已經包含 validation 資料集的評估，所以請根據只是一步一步地做就好
+
+### Inference
+* The inference logic is included at the end of the student training notebooks.
+* Alternatively, you can run cvhw1-inference-process.ipynb to generate predictions on the test dataset using pretrained student weights.
+* Ensure the model weights are placed in the directory specified in the notebook.
+> Note: Only the student model is required for inference.
