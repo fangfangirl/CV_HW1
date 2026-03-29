@@ -85,6 +85,7 @@ The notebook also evaluates the student model on the validation dataset after ea
 > Note: Only the student model is required for inference.
 
 ## Performance Snapshot
+The table below summarizes the performance of the Teacher and Student models on the training, validation, and test datasets.
 
 | Model       | Dataset     | Accuracy | 
 |------------ |------------ |---------|
@@ -94,5 +95,6 @@ The notebook also evaluates the student model on the validation dataset after ea
 | Student     | Validation  | 94.33%  | 
 | Student     | Test        | 98.00%  | 
 
-下面是leaderboard 截圖
+### Leaderboard / Final Results
+The screenshot below shows the final test leaderboard for the project:  
 ![Result](leaderboard.png)
