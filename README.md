@@ -1,4 +1,4 @@
-# NYCU Computer Vision 2026 HW1
+<img width="1756" height="514" alt="image" src="https://github.com/user-attachments/assets/4c4773f4-e151-46c0-8715-e26ec9aa832c" /># NYCU Computer Vision 2026 HW1
 
 * **Student ID:** 314511037
 * **Name:** 張周芳
@@ -85,4 +85,13 @@ The notebook also evaluates the student model on the validation dataset after ea
 > Note: Only the student model is required for inference.
 
 ## Performance Snapshot
-<img width="1766" height="320" alt="image" src="https://github.com/user-attachments/assets/42818b0a-400b-4e87-bfc8-6c466e353931" />
+
+| Model       | Dataset     | Accuracy | 
+|------------ |------------ |---------|
+| Teacher     | Train       | 96.39%  |
+| Teacher     | Validation  | 93.67%  |      
+| Student     | Train       | 84.49%  | 
+| Student     | Validation  | 94.33%  | 
+| Student     | Test        | 98.00%  | 
+
+下面是leaderboard 截圖
