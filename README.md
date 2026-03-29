@@ -1,4 +1,4 @@
-<img width="1756" height="514" alt="image" src="https://github.com/user-attachments/assets/4c4773f4-e151-46c0-8715-e26ec9aa832c" /># NYCU Computer Vision 2026 HW1
+# NYCU Computer Vision 2026 HW1
 
 * **Student ID:** 314511037
 * **Name:** 張周芳
