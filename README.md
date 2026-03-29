@@ -32,6 +32,18 @@ CV_HW1/
 > Please download or prepare the dataset yourself following the structure above (i.e., extract the provided assignment package).  
 > When using **Colab** or **Kaggle**, upload the dataset and model files to your environment and update the paths in the notebooks accordingly.  
 > When using a **local machine**, place the dataset in the same structure and update the notebook file paths to match your local directories.
+
+
+> **Note:** The dataset and model files are not included in the repository.  
+> Please download or prepare the dataset yourself following the structure above (i.e., extract the provided assignment package).  
+> Both the **teacher** and **student** models can be trained from scratch using the provided notebooks.  
+> If you want to skip training and directly run inference, you can **download the pretrained models** from the cloud:  
+> - [Teacher model download link](https://drive.google.com/file/d/1nqS_6sRFx52BCtmqBfd8aG7UL62c1ryw/view?usp=sharing)
+> - [Student model download link](https://drive.google.com/file/d/11-vZi80MOn4BH1DpQdgalRQlvz7mb7SD/view?usp=sharing)
+> After downloading, place the models in the repository as `teacher_model.pth` and `student_model.pth`.  
+> When using **Colab** or **Kaggle**, upload the dataset and model files to your environment and update the paths in the notebooks accordingly.  
+> When using a **local machine**, place the dataset in the same structure and update the notebook file paths to match your local directories.
+
 ## Environment Setup
 
 - Python 3.10+
