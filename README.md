@@ -88,7 +88,7 @@ The notebook also evaluates the student model on the validation dataset after ea
 
 ### Inference
 * The inference logic is included at the end of the student training notebooks.
-* Alternatively, you can run cvhw1-inference-process.ipynb to generate predictions on the test dataset using pretrained student weights.
+* Alternatively, you can run `cvhw1-inference-process.ipynb` to generate predictions on the test dataset using pretrained student weights.
 * Ensure the model weights are placed in the directory specified in the notebook.
 > Note: Only the student model is required for inference.
 
